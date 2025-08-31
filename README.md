@@ -2,11 +2,11 @@
 ---
 
 # Google Summer of Code 2025 - Final Report
-- Name : Kajal Jotwani
-- Organization : UC OSPO
-- Project Description: [Brahma / Allocentric WebXR Interfaces](https://ucsc-ospo.github.io/project/osre25/ucsc/brahma/)
-- Mentor : [Samir Ghosh ](https://github.com/smrghsh)
-- Pull Request : [Routing system for documentation and examples](https://github.com/smrghsh/brahma-xr/pull/3)
+- **Name** : Kajal Jotwani
+- **Organization** : UC OSPO
+- **Project Description**: [Brahma / Allocentric WebXR Interfaces](https://ucsc-ospo.github.io/project/osre25/ucsc/brahma/)
+- **Mentor** : [Samir Ghosh ](https://github.com/smrghsh)
+- **Pull Request** : [Routing system for documentation and examples](https://github.com/smrghsh/brahma-xr/pull/3) **(awaiting merge)**
 
 ## About the project 
 Brahma-XR is a library and framework for building collaborative WebXR rooms with spatial data. The same code runs directly in the browser and works across devices like Apple Vision Pro, Meta Quest 3, and VARJO, which makes it really useful for quick prototyping and on-the-fly demos.
@@ -42,7 +42,7 @@ brahma-xr/
 └── style.css                   # Global or gallery styles
 ```
 
-### 1. Server-Side Code - [Pull request](https://github.com/smrghsh/brahma-xr/pull/2)
+### 1. Server-Side Code 
 This PR restructures the existing server-side code into a BrahmaServer class. The class, defined in server.js, provides two main methods: initialize() and run(), making the server setup cleaner and reusable. The **main.js** file inside the **server-example** folder demonstrated the usage:
 
 ```
@@ -53,8 +53,7 @@ brahmaServer.run();
 
 Constants such as IP addresses, ports, and SSL paths were also parameterized, allowing the server to be configured easily.
 
-### 2. Documentation - [Pull request](https://github.com/smrghsh/brahma-xr/pull/3)
-
+### 2. Documentation 
 
 Documentation plays a crucial role in any open-source project, and for Brahma, it is particularly important due to its bipartite npm packages. Clear documentation is necessary to explain the package architecture, how to initialize and use them, the responsibilities of client- and server-side code, and the available API endpoints.
 
@@ -62,7 +61,7 @@ I explored various static documentation site generators, and with guidance from 
 
 ![alt text](/Images/Documentation.png)
 
-### 3. Example Gallery - [Pull request](https://github.com/smrghsh/brahma-xr/pull/3)
+### 3. Example Gallery 
 Brahma’s example are fully fledged, networked multi-user WebXR applications that are visual by nature. The goal was to showcase these examples on a dedicated gallery page, similar to how projects like three.js and deck.gl present theirs.
 
 As part of the process, I explored different approaches to routing and integration. One option was the way three.js handles it, using hash-based routing with iframes where each example is a static HTML page, and navigation is managed through a metadata file that updates the iframe source. Another approach was the method used by deck.gl, where each demo is implemented as a standalone React component, with routing handled by react-router-dom to provide clean, semantic URLs like /examples/scatterplot. A third possibility was to run each demo on separate ports and concurrently display them in the gallery, though this would have added unnecessary overhead.
